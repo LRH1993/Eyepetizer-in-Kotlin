@@ -1,19 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.tt.lvruheng.eyepetizer.ui.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+    <View
+        android:layout_above="@+id/rg_root"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+    <RadioGroup
+        android:id="@+id/rg_root"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-</android.support.constraint.ConstraintLayout>
+        <RadioButton
+            android:textSize="10sp"
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/home_bg_selected"
+            android:gravity="center"
+            android:text="首页"/>
+        <RadioButton
+            android:textSize="10sp"
+            android:id="@+id/rb_find"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/find_bg_selected"
+            android:gravity="center"
+            android:text="发现"
+            />
+
+        <RadioButton
+            android:textSize="10sp"
+            android:id="@+id/rb_hot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/hot_bg_selected"
+            android:gravity="center"
+            android:text="热门"/>
+        <RadioButton
+            android:textSize="10sp"
+            android:id="@+id/rb_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            android:button="@null"
+            android:drawableTop="@drawable/mine_bg_selected"
+            android:gravity="center"
+            android:text="我的"/>
+    </RadioGroup>
+
+</RelativeLayout>
