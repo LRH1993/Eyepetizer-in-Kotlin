@@ -1,25 +1,32 @@
 package com.tt.lvruheng.eyepetizer.ui
 
+import android.content.Context
 import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.view.KeyEvent
 import android.view.View
+import android.widget.Toast
 import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.ui.fragment.FindFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.HomeFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.HotFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.MineFragment
+import com.tt.lvruheng.eyepetizer.utils.showToast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.security.KeyStore
 import java.util.*
 import java.util.function.ToDoubleBiFunction
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
-    var homeFragment : HomeFragment? = null
-    var findFragment : FindFragment? = null
-    var hotFragemnt : HotFragment? = null
-    var mineFragment : MineFragment? = null
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+    var homeFragment: HomeFragment? = null
+    var findFragment: FindFragment? = null
+    var hotFragemnt: HotFragment? = null
+    var mineFragment: MineFragment? = null
+    var mExitTime: Long = 0
+    var toast: Toast? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,55 +39,57 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private fun initToolbar() {
         var today = getToday()
         tv_bar_title.text = today
-        tv_bar_title.typeface = Typeface.createFromAsset(this.assets,"fonts/Lobster-1.4.otf")
+        tv_bar_title.typeface = Typeface.createFromAsset(this.assets, "fonts/Lobster-1.4.otf")
         iv_search.setOnClickListener {
-            if(rb_mine.isChecked){
+            if (rb_mine.isChecked) {
                 //todo 点击设置
-            }else{
+            } else {
                 //todo 点击搜索
             }
 
         }
     }
-    private fun getToday() : String{
-        var list = arrayOf("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
-        var data : Date = Date()
-        var calendar : Calendar = Calendar.getInstance()
+
+    private fun getToday(): String {
+        var list = arrayOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+        var data: Date = Date()
+        var calendar: Calendar = Calendar.getInstance()
         calendar.time = data
-        var index : Int = calendar.get(Calendar.DAY_OF_WEEK)-1
-        if(index<0){
+        var index: Int = calendar.get(Calendar.DAY_OF_WEEK) - 1
+        if (index < 0) {
             index = 0
         }
         return list[index]
     }
+
     private fun initFragment(savedInstanceState: Bundle?) {
-        if(savedInstanceState!=null){
+        if (savedInstanceState != null) {
             //异常情况
-            val mFragments : List<Fragment> = supportFragmentManager.fragments
-            for (item in mFragments){
-                if (item is HomeFragment){
+            val mFragments: List<Fragment> = supportFragmentManager.fragments
+            for (item in mFragments) {
+                if (item is HomeFragment) {
                     homeFragment = item
                 }
-                if(item is FindFragment){
+                if (item is FindFragment) {
                     findFragment = item
                 }
-                if(item is HotFragment){
+                if (item is HotFragment) {
                     hotFragemnt = item
                 }
-                if(item is MineFragment){
+                if (item is MineFragment) {
                     mineFragment = item
                 }
             }
-        }else{
+        } else {
             homeFragment = HomeFragment()
             findFragment = FindFragment()
             mineFragment = MineFragment()
-            hotFragemnt  = HotFragment()
+            hotFragemnt = HotFragment()
             val fragmentTrans = supportFragmentManager.beginTransaction()
-            fragmentTrans.add(R.id.fl_content,homeFragment)
-            fragmentTrans.add(R.id.fl_content,findFragment)
-            fragmentTrans.add(R.id.fl_content,mineFragment)
-            fragmentTrans.add(R.id.fl_content,hotFragemnt)
+            fragmentTrans.add(R.id.fl_content, homeFragment)
+            fragmentTrans.add(R.id.fl_content, findFragment)
+            fragmentTrans.add(R.id.fl_content, mineFragment)
+            fragmentTrans.add(R.id.fl_content, hotFragemnt)
             fragmentTrans.commit()
         }
         supportFragmentManager.beginTransaction().show(homeFragment)
@@ -101,8 +110,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onClick(v: View?) {
         clearState()
-        when(v?.id){
-            R.id.rb_find ->{
+        when (v?.id) {
+            R.id.rb_find -> {
                 rb_find.isChecked = true
                 rb_find.setTextColor(resources.getColor(R.color.black))
                 supportFragmentManager.beginTransaction().show(findFragment)
@@ -114,7 +123,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 tv_bar_title.visibility = View.VISIBLE
                 iv_search.setImageResource(R.drawable.icon_search)
             }
-            R.id.rb_home ->{
+            R.id.rb_home -> {
                 rb_home.isChecked = true
                 rb_home.setTextColor(resources.getColor(R.color.black))
                 supportFragmentManager.beginTransaction().show(homeFragment)
@@ -126,7 +135,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 tv_bar_title.visibility = View.VISIBLE
                 iv_search.setImageResource(R.drawable.icon_search)
             }
-            R.id.rb_hot ->{
+            R.id.rb_hot -> {
                 rb_hot.isChecked = true
                 rb_hot.setTextColor(resources.getColor(R.color.black))
                 supportFragmentManager.beginTransaction().show(hotFragemnt)
@@ -138,7 +147,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
                 tv_bar_title.visibility = View.VISIBLE
                 iv_search.setImageResource(R.drawable.icon_search)
             }
-            R.id.rb_mine ->{
+            R.id.rb_mine -> {
                 rb_mine.isChecked = true
                 rb_mine.setTextColor(resources.getColor(R.color.black))
                 supportFragmentManager.beginTransaction().show(mineFragment)
@@ -152,11 +161,26 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         }
 
     }
-    private fun clearState(){
+
+    private fun clearState() {
         rg_root.clearCheck()
         rb_home.setTextColor(resources.getColor(R.color.gray))
         rb_mine.setTextColor(resources.getColor(R.color.gray))
         rb_hot.setTextColor(resources.getColor(R.color.gray))
         rb_find.setTextColor(resources.getColor(R.color.gray))
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis().minus(mExitTime) <= 3000) {
+                finish()
+                toast!!.cancel()
+            } else {
+                mExitTime = System.currentTimeMillis()
+                toast = showToast("再按一次退出程序")
+            }
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
     }
 }

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="kotlin-stdlib-jre7-1.1.2-4">
     <CLASSES>
-      <root url="jar:///private/var/folders/1x/x2jjb0k11qd35d2sx8hdvy7c0000gn/T/AppTranslocation/6F0F715F-8CB3-4152-AB6C-D097D93F9D0E/d/Android Studio 3.0 Preview.app/Contents/gradle/m2repository/org/jetbrains/kotlin/kotlin-stdlib-jre7/1.1.2-4/kotlin-stdlib-jre7-1.1.2-4.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/kotlin/kotlin-stdlib-jre7/1.1.2-4/kotlin-stdlib-jre7-1.1.2-4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
