@@ -9,7 +9,7 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
  */
 interface HomeContract{
     interface View : BaseView<Presenter> {
-        fun setData(list : MutableList<HomeBean>)
+        fun setData(bean : HomeBean)
     }
     interface Presenter : BasePresenter {
         fun requestData()
