@@ -1,0 +1,25 @@
+package com.tt.lvruheng.eyepetizer.mvp.model.bean
+
+/**
+ * Created by lvruheng on 2017/7/5.
+ */
+
+data class HomeBean(var nextPageUrl: String?,var nextPublishTime: Long,
+                    var newestIssueType: String?,var dialog: Any?,
+                    var issueList: List<IssueListBean>?) {
+
+    data class IssueListBean(var releaseTime: Long,var type: String?,
+                             var date: Long,var publishTime: Long,var count: Int,
+                             var itemList: List<ItemListBean>?) {
+
+        data class ItemListBean(var type: String?,var data: DataBean?,var tag: Any?) {
+
+            data class DataBean(var dataType: String?,var id: Int,var title: String?,
+                                var description:String?, var image: String?,var actionUrl: String?,
+                                var adTrack: Any?,var isShade: Boolean,
+                                var label: Any?,var labelList: Any?,var header: Any?) {
+
+            }
+        }
+    }
+}
