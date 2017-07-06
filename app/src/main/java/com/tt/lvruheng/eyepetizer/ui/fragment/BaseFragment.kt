@@ -2,6 +2,7 @@ package com.tt.lvruheng.eyepetizer.ui.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,16 +19,13 @@ abstract class BaseFragment : Fragment() {
         if(rootView==null){
             rootView = inflater?.inflate(getLayoutResources(),container,false)
         }
-
-        if(isFragmentVisiable&&!isFirst){
-            onFragmentVisiableChange(true)
-        }
         return  rootView
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
+
     }
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
@@ -48,7 +46,7 @@ abstract class BaseFragment : Fragment() {
             isFragmentVisiable = false;
         }
     }
-    protected fun onFragmentVisiableChange(b: Boolean) {
+    open protected fun onFragmentVisiableChange(b: Boolean) {
 
     }
 

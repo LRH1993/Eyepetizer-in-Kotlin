@@ -2,8 +2,11 @@ package com.tt.lvruheng.eyepetizer.ui.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
+import android.util.Log.println
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,20 +19,31 @@ import com.tt.lvruheng.eyepetizer.mvp.presenter.HomePresenter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home_fragment.*
 import java.util.*
+import java.util.regex.Pattern
 
 /**
  * Created by lvruheng on 2017/7/4.
  */
-class HomeFragment : BaseFragment(),HomeContract.View{
-    var mPresenter : HomePresenter? = null
+class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRefreshListener {
+    var mIsRefresh: Boolean = false
+    var mPresenter: HomePresenter? = null
     var mList = ArrayList<ItemListBean>()
-    var mAdapter : HomeAdatper? = null
+    var mAdapter: HomeAdatper? = null
+    var data: String? = null
     override fun setData(bean: HomeBean) {
+        val regEx = "[^0-9]"
+        val p = Pattern.compile(regEx)
+        val m = p.matcher(bean?.nextPageUrl)
+        data = m.replaceAll("").subSequence(1, m.replaceAll("").length - 1).toString()
+        if (mIsRefresh) {
+            mIsRefresh = false
+            refreshLayout.isRefreshing = false
+            mList.clear()
+        }
         bean.issueList!!
                 .flatMap { it.itemList!! }
                 .filter { it.type.equals("video") }
                 .forEach { mList.add(it) }
-        mAdapter?.list = mList
         mAdapter?.notifyDataSetChanged()
     }
 
@@ -39,10 +53,31 @@ class HomeFragment : BaseFragment(),HomeContract.View{
     }
 
     override fun initView() {
-        mPresenter = HomePresenter(context,0,this)
+        mPresenter = HomePresenter(context, this)
         mPresenter?.start()
         recyclerView.layoutManager = LinearLayoutManager(context)
-        mAdapter = HomeAdatper(context,mList)
+        mAdapter = HomeAdatper(context, mList)
         recyclerView.adapter = mAdapter
+        refreshLayout.setOnRefreshListener(this)
+        recyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener(){
+            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                var layoutManager : LinearLayoutManager = recyclerView?.layoutManager as LinearLayoutManager
+                var lastPositon = layoutManager.findLastVisibleItemPosition()
+                Log.e("hello","hello"+lastPositon+"："+mList.size)
+                if(newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size-1){
+                    mPresenter?.moreData(data)
+                    Log.e("hello","hello")
+                }
+            }
+        })
+
+    }
+
+    override fun onRefresh() {
+        if (!mIsRefresh) {
+            mIsRefresh = true
+            mPresenter?.start()
+        }
     }
 }

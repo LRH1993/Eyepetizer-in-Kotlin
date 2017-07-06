@@ -66,6 +66,9 @@ class HomeAdatper(context: Context,list: MutableList<HomeBean.IssueListBean.Item
         }else{
             holder?.iv_user?.visibility = View.GONE
         }
+        holder?.itemView?.setOnClickListener {
+            //跳转视频详情页
+        }
     }
 
 
