@@ -32,9 +32,6 @@ class HomePresenter(context: Context,data : Long,view : HomeContract.View) : Hom
     override fun requestData() {
        val observable : Observable<HomeBean>? = mContext?.let { mModel.loadData(it,true,0) }
         observable?.applySchedulers()?.subscribe { homeBean : HomeBean ->
-            homeBean.issueList?.forEach {
-                it.itemList?.filter { it.type != "video" }
-            }
             mView?.setData(homeBean)
         }
     }

@@ -18,13 +18,17 @@ abstract class BaseFragment : Fragment() {
         if(rootView==null){
             rootView = inflater?.inflate(getLayoutResources(),container,false)
         }
-        initView()
+
         if(isFragmentVisiable&&!isFirst){
             onFragmentVisiableChange(true)
         }
         return  rootView
     }
 
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initView()
+    }
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
         if (isVisibleToUser) {

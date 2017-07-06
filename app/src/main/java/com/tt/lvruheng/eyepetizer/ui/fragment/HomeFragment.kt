@@ -11,7 +11,9 @@ import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.adapter.HomeAdatper
 import com.tt.lvruheng.eyepetizer.mvp.contract.HomeContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean.IssueListBean.ItemListBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.HomePresenter
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home_fragment.*
 
 /**
@@ -19,10 +21,13 @@ import kotlinx.android.synthetic.main.home_fragment.*
  */
 class HomeFragment : BaseFragment(),HomeContract.View{
     var mPresenter : HomePresenter? = null
-    var mList : MutableList<HomeBean.IssueListBean.ItemListBean>? = null
+    var mList = ArrayList<ItemListBean>()
     var mAdapter : HomeAdatper? = null
     override fun setData(bean: HomeBean) {
-
+        bean.issueList!!
+                .flatMap { it.itemList!! }
+                .filter { it.type.equals("video") }
+                .forEach { mList.add(it) }
     }
 
 
