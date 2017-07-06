@@ -67,7 +67,6 @@ class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRef
                 Log.e("hello","hello"+lastPositon+"："+mList.size)
                 if(newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size-1){
                     mPresenter?.moreData(data)
-                    Log.e("hello","hello")
                 }
             }
         })
