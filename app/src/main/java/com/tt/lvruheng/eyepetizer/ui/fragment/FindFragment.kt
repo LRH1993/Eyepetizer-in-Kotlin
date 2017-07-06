@@ -2,18 +2,22 @@ package com.tt.lvruheng.eyepetizer.ui.fragment
 
 import android.util.Log
 import com.tt.lvruheng.eyepetizer.R
+import com.tt.lvruheng.eyepetizer.adapter.FindAdapter
 import com.tt.lvruheng.eyepetizer.mvp.contract.FindContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.FindBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.FindPresenter
-import com.tt.lvruheng.eyepetizer.mvp.presenter.HomePresenter
+import kotlinx.android.synthetic.main.find_fragment.*
 
 /**
  * Created by lvruheng on 2017/7/4.
  */
 class FindFragment : BaseFragment(),FindContract.View {
     var mPresenter: FindPresenter? = null
+    var mAdapter : FindAdapter? = null
+    var mList : MutableList<FindBean>? = null
     override fun setData(beans: MutableList<FindBean>) {
-        Log.e("find", ""+beans?.size)
+        mAdapter?.mList = beans
+        mAdapter?.notifyDataSetChanged()
     }
 
     override fun getLayoutResources(): Int {
@@ -23,6 +27,8 @@ class FindFragment : BaseFragment(),FindContract.View {
     override fun initView() {
         mPresenter = FindPresenter(context,this)
         mPresenter?.start()
+        mAdapter = FindAdapter(context,mList)
+        gv_find.adapter = mAdapter
     }
 
 }
