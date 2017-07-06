@@ -1,16 +1,30 @@
 package com.tt.lvruheng.eyepetizer.ui.fragment
 
+import android.support.v4.app.Fragment
 import com.tt.lvruheng.eyepetizer.R
+import com.tt.lvruheng.eyepetizer.adapter.HotAdatpter
+import kotlinx.android.synthetic.main.hot_fragment.*
 
 /**
  * Created by lvruheng on 2017/7/4.
  */
 class HotFragment : BaseFragment(){
+     var mTabs = listOf<String>("周排行","月排行","总排行").toMutableList()
+     lateinit var mFragments : ArrayList<Fragment>
     override fun getLayoutResources(): Int {
         return R.layout.hot_fragment
     }
 
     override fun initView() {
+        var weekFragment : RankFragment = RankFragment()
+        var monthFragment : RankFragment = RankFragment()
+        var allFragment : RankFragment = RankFragment()
+        mFragments = ArrayList()
+        mFragments.add(weekFragment as Fragment)
+        mFragments.add(monthFragment as Fragment)
+        mFragments.add(allFragment as Fragment)
+        vp_content.adapter = HotAdatpter(fragmentManager,mFragments,mTabs)
+        tabs.setupWithViewPager(vp_content)
     }
 
 }

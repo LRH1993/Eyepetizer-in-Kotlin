@@ -27,8 +27,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="文字"/>
+                android:textStyle="bold"/>
         </LinearLayout>
 
     </FrameLayout>
