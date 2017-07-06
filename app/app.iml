@@ -136,6 +136,7 @@
     <orderEntry type="library" exported="" name="support-core-ui-25.4.0" level="project" />
     <orderEntry type="library" exported="" name="rxandroid-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="rxjava-2.0.4" level="project" />
+    <orderEntry type="library" exported="" name="glide-3.7.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-25.4.0" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.4.0" level="project" />

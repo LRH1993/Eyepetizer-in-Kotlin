@@ -15,6 +15,7 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean.IssueListBean.ItemList
 import com.tt.lvruheng.eyepetizer.mvp.presenter.HomePresenter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home_fragment.*
+import java.util.*
 
 /**
  * Created by lvruheng on 2017/7/4.
@@ -28,6 +29,8 @@ class HomeFragment : BaseFragment(),HomeContract.View{
                 .flatMap { it.itemList!! }
                 .filter { it.type.equals("video") }
                 .forEach { mList.add(it) }
+        mAdapter?.list = mList
+        mAdapter?.notifyDataSetChanged()
     }
 
 

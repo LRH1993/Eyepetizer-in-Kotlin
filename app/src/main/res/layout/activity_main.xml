@@ -30,6 +30,7 @@
 
     </android.support.v7.widget.Toolbar>
     <FrameLayout
+        android:layout_above="@id/rg_root"
         android:layout_below="@id/toolbar"
         android:id="@+id/fl_content"
         android:layout_width="match_parent"
