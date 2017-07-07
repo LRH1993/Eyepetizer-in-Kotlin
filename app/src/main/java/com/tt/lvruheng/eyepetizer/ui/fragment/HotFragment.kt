@@ -28,11 +28,11 @@ class HotFragment : BaseFragment() {
         var monthFragment: RankFragment = RankFragment()
         var monthBundle = Bundle()
         monthBundle.putString("strategy", STRATEGY[1])
-        weekFragment.arguments = monthBundle
+        monthFragment.arguments = monthBundle
         var allFragment: RankFragment = RankFragment()
         var allBundle = Bundle()
         allBundle.putString("strategy", STRATEGY[2])
-        weekFragment.arguments = allBundle
+        allFragment.arguments = allBundle
         mFragments = ArrayList()
         mFragments.add(weekFragment as Fragment)
         mFragments.add(monthFragment as Fragment)

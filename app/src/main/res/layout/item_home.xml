@@ -24,6 +24,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tv_title"
+                android:maxLines="1"
                 android:textSize="15sp"
                 android:layout_alignParentTop="true"
                 android:padding="5dp"

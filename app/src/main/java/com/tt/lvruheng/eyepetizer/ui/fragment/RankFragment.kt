@@ -35,6 +35,10 @@ class RankFragment : BaseFragment(), HotContract.View {
 
     override fun setData(bean: HotBean) {
         Log.e("rank", bean.toString())
+        bean.itemList?.forEach {
+            it.data?.let { it1 -> mList.add(it1) }
+        }
+        mAdapter.notifyDataSetChanged()
     }
 
 }
