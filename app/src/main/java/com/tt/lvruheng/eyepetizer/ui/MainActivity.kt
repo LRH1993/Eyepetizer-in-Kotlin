@@ -170,6 +170,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         rb_find.setTextColor(resources.getColor(R.color.gray))
     }
 
+    override fun onPause() {
+        super.onPause()
+        toast?.let { toast!!.cancel() }
+    }
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (System.currentTimeMillis().minus(mExitTime) <= 3000) {

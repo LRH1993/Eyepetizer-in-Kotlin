@@ -1,6 +1,7 @@
 package com.tt.lvruheng.eyepetizer.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Typeface
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,6 +11,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
+import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 
 /**
@@ -42,7 +45,7 @@ class RankAdapter(context: Context, list: ArrayList<HotBean.ItemListBean.DataBea
         var category = list?.get(position)?.category
         var duration = list?.get(position)?.duration
         var minute =duration?.div(60)
-        var second = duration?.minus((minute?.times(60)) as Int )
+        var second = duration?.minus((minute?.times(60)) as Long )
         var realMinute : String
         var realSecond : String
         if(minute!!<10){
@@ -56,6 +59,19 @@ class RankAdapter(context: Context, list: ArrayList<HotBean.ItemListBean.DataBea
             realSecond = second.toString()
         }
         holder?.tv_time?.text = "$category / $realMinute'$realSecond''"
+        holder?.itemView?.setOnClickListener {
+            //跳转视频详情页
+            var intent : Intent = Intent(context, VideoDetailActivity::class.java)
+            var desc = list?.get(position)?.description
+            var playUrl = list?.get(position)?.playUrl
+            var blurred = list?.get(position)?.cover?.blurred
+            var collect = list?.get(position)?.consumption?.collectionCount
+            var share = list?.get(position)?.consumption?.shareCount
+            var reply = list?.get(position)?.consumption?.replyCount
+            var videoBean  = VideoBean(photoUrl,title,desc,duration,playUrl,category,blurred,collect ,share ,reply)
+            intent.putExtra("data",videoBean)
+            context?.let { context -> context.startActivity(intent) }
+        }
     }
 
 

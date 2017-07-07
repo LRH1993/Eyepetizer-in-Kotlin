@@ -11,7 +11,7 @@ data class HotBean(var count: Int, var total: Int, var nextPageUrl: Any?, var it
         data class DataBean(var dataType: String?,var id: Int,var title: String?,
                             var slogan: Any?, var description: String?,var provider: ProviderBean?,
                             var category: String?,var author: Any? ,var cover: CoverBean?,
-                            var playUrl: String?,var thumbPlayUrl: Any?,var duration: Int,
+                            var playUrl: String?,var thumbPlayUrl: Any?,var duration: Long,
                             var releaseTime: Long,var library: String?,
                             var consumption: ConsumptionBean?,var campaign: Any?,var waterMarks: Any?,
                             var adTrack: Any?, var type: String?,var titlePgc: Any?,var descriptionPgc: Any?,

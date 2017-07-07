@@ -8,24 +8,10 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="3">
-
-    <ImageView
+    <com.shuyu.gsyvideoplayer.video.NormalGSYVideoPlayer
         android:id="@+id/iv_video_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/iv_video_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_action_play" />
-    </LinearLayout>
 </FrameLayout>
 
 <FrameLayout
@@ -34,7 +20,7 @@
     android:layout_weight="2">
 
     <ImageView
-        android:id="@+id/video_detail_ivmo"
+        android:id="@+id/iv_bottom_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -51,7 +37,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/video_detail_title"
+                android:id="@+id/tv_video_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="标题"
@@ -60,7 +46,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/video_detail_time"
+                android:id="@+id/tv_video_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

@@ -1,6 +1,7 @@
 package com.tt.lvruheng.eyepetizer.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Typeface
 import android.support.v7.widget.RecyclerView
 import android.util.Log
@@ -12,6 +13,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
+import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 import java.text.SimpleDateFormat
 import java.util.*
@@ -68,6 +71,17 @@ class HomeAdatper(context: Context,list: MutableList<HomeBean.IssueListBean.Item
         }
         holder?.itemView?.setOnClickListener {
             //跳转视频详情页
+            var intent : Intent = Intent(context,VideoDetailActivity::class.java)
+            var desc = bean?.data?.description
+            var duration = bean?.data?.duration
+            var playUrl = bean?.data?.playUrl
+            var blurred = bean?.data?.cover?.blurred
+            var collect = bean?.data?.consumption?.collectionCount
+            var share = bean?.data?.consumption?.shareCount
+            var reply = bean?.data?.consumption?.replyCount
+            var videoBean  = VideoBean(photo,title,desc,duration,playUrl,category,blurred,collect ,share ,reply)
+            intent.putExtra("data",videoBean)
+            context?.let { context -> context.startActivity(intent) }
         }
     }
 

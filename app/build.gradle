@@ -10,7 +10,7 @@ android {
     buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "com.tt.lvruheng.eyepetizer"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -54,4 +54,5 @@ dependencies {
     //glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.android.support:design:25.4.0'
+    compile 'com.shuyu:GSYVideoPlayer:1.6.8'
 }

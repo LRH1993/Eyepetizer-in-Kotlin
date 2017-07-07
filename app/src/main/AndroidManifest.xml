@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.VideoDetailActivity"></activity>
     </application>
 
 </manifest>

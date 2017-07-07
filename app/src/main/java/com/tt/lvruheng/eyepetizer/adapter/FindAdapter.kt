@@ -61,9 +61,7 @@ class FindAdapter(context: Context,list: MutableList<FindBean>?) : BaseAdapter()
         init {
            tv_title = itemView.findViewById(R.id.tv_title) as TextView?
            iv_photo = itemView.findViewById(R.id.iv_photo) as ImageView?
-           itemView.setOnClickListener{
-               //todo 点击跳转事件
-           }
+
         }
 
     }
