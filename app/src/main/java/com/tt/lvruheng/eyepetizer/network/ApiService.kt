@@ -2,6 +2,7 @@ package com.tt.lvruheng.eyepetizer.network
 
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.FindBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
+import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -13,7 +14,7 @@ import retrofit2.http.Query
 interface ApiService{
     companion object{
         val BASE_URL : String
-            get() = "http://baobab.wandoujia.com/api/"
+            get() = "http://baobab.kaiyanapp.com/api/"
     }
 
 
@@ -29,5 +30,7 @@ interface ApiService{
     //获取发现频道信息
     @GET("v2/categories?udid=26868b32e808498db32fd51fb422d00175e179df&vc=83")
     fun getFindData() : Observable<MutableList<FindBean>>
-
+    //获取热门排行信息
+    @GET("v3/ranklist")
+    fun getHotData() : Observable<HotBean>
 }

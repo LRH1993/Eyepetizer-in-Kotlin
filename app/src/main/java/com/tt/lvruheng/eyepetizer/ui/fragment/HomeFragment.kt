@@ -64,9 +64,11 @@ class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRef
                 super.onScrollStateChanged(recyclerView, newState)
                 var layoutManager : LinearLayoutManager = recyclerView?.layoutManager as LinearLayoutManager
                 var lastPositon = layoutManager.findLastVisibleItemPosition()
-                Log.e("hello","hello"+lastPositon+"："+mList.size)
                 if(newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size-1){
-                    mPresenter?.moreData(data)
+                    if(data!=null){
+                        mPresenter?.moreData(data)
+                    }
+
                 }
             }
         })
