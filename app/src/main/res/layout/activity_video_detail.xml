@@ -8,8 +8,8 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="3">
-    <com.shuyu.gsyvideoplayer.video.NormalGSYVideoPlayer
-        android:id="@+id/iv_video_detail"
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/gsy_player"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
