@@ -13,6 +13,6 @@ interface HotContract{
         fun setData(bean : HotBean)
     }
     interface Presenter : BasePresenter {
-        fun requestData()
+        fun requestData(strategy: String)
     }
 }

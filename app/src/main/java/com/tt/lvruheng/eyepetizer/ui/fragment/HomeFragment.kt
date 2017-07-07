@@ -38,7 +38,10 @@ class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRef
         if (mIsRefresh) {
             mIsRefresh = false
             refreshLayout.isRefreshing = false
-            mList.clear()
+            if (mList.size > 0) {
+                mList.clear()
+            }
+
         }
         bean.issueList!!
                 .flatMap { it.itemList!! }
@@ -59,13 +62,13 @@ class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRef
         mAdapter = HomeAdatper(context, mList)
         recyclerView.adapter = mAdapter
         refreshLayout.setOnRefreshListener(this)
-        recyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener(){
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                var layoutManager : LinearLayoutManager = recyclerView?.layoutManager as LinearLayoutManager
+                var layoutManager: LinearLayoutManager = recyclerView?.layoutManager as LinearLayoutManager
                 var lastPositon = layoutManager.findLastVisibleItemPosition()
-                if(newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size-1){
-                    if(data!=null){
+                if (newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size - 1) {
+                    if (data != null) {
                         mPresenter?.moreData(data)
                     }
 

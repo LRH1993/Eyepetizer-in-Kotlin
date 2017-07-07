@@ -32,5 +32,6 @@ interface ApiService{
     fun getFindData() : Observable<MutableList<FindBean>>
     //获取热门排行信息
     @GET("v3/ranklist")
-    fun getHotData() : Observable<HotBean>
+    fun getHotData(@Query("num") num :Int,@Query("strategy") strategy :String,
+                   @Query("udid") udid :String,@Query("vc") vc :Int) : Observable<HotBean>
 }
