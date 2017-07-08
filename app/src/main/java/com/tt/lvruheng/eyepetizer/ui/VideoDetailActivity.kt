@@ -101,7 +101,7 @@ class VideoDetailActivity : AppCompatActivity() {
         imageView.scaleType = ImageView.ScaleType.CENTER_CROP
         ImageViewAsyncTask(mHandler, this, imageView).execute(bean.feed)
         gsy_player.titleTextView.visibility = View.GONE
-        gsy_player.backButton.visibility = View.GONE
+        gsy_player.backButton.visibility = View.VISIBLE
         orientationUtils = OrientationUtils(this, gsy_player)
         gsy_player.setIsTouchWiget(true);
         //关闭自动旋转
@@ -122,13 +122,16 @@ class VideoDetailActivity : AppCompatActivity() {
                 orientationUtils.isEnable = true
                 isPlay = true;
             }
+
             override fun onAutoComplete(url: String?, vararg objects: Any?) {
                 super.onAutoComplete(url, *objects)
 
             }
+
             override fun onClickStartError(url: String?, vararg objects: Any?) {
                 super.onClickStartError(url, *objects)
             }
+
             override fun onQuitFullscreen(url: String?, vararg objects: Any?) {
                 super.onQuitFullscreen(url, *objects)
                 orientationUtils?.let { orientationUtils.backToProtVideo() }
@@ -138,6 +141,9 @@ class VideoDetailActivity : AppCompatActivity() {
             //配合下方的onConfigurationChanged
             orientationUtils.isEnable = !lock
         }
+        gsy_player.backButton.setOnClickListener(View.OnClickListener {
+            onBackPressed()
+        })
 
     }
 

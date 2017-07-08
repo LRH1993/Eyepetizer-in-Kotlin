@@ -10,21 +10,29 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/white">
         <RelativeLayout
+            android:layout_marginRight="90dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
                 android:layout_centerInParent="true"
                 android:gravity="center"
+                android:textSize="16sp"
                 android:id="@+id/tv_bar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
-    <android.support.v7.widget.RecyclerView
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_below="@id/toolbar"
-        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </RelativeLayout>
