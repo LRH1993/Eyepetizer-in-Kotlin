@@ -5,6 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
     </style>
+
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/white</item>
@@ -20,7 +21,11 @@
         <item name="android:windowBackground">@color/black</item>
     </style>
 
-
+    <style name="Video" parent="AppBaseTheme">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
     <!--Activity动画-->
     <style name="AnimationActivity" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_left</item>

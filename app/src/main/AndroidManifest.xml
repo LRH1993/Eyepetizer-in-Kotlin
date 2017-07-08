@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.tt.lvruheng.eyepetizer">
+
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -10,7 +15,8 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SplashActivity"
+        <activity
+            android:name=".ui.SplashActivity"
             android:theme="@style/Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,7 +25,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity"></activity>
-        <activity android:name=".ui.VideoDetailActivity"></activity>
+        <activity
+            android:name=".ui.VideoDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Video"></activity>
     </application>
 
 </manifest>
