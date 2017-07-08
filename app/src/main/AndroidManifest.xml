@@ -30,6 +30,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/Video"></activity>
+        <activity android:name=".ui.FindDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -46,6 +46,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:textSize="12sp"
                 android:id="@+id/tv_video_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
