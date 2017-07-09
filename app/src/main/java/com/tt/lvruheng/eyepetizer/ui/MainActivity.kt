@@ -1,24 +1,24 @@
 package com.tt.lvruheng.eyepetizer.ui
 
-import android.content.Context
 import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
 import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
+import com.tt.lvruheng.eyepetizer.search.SEARCH_TAG
+import com.tt.lvruheng.eyepetizer.search.SearchFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.FindFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.HomeFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.HotFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.MineFragment
 import com.tt.lvruheng.eyepetizer.utils.showToast
 import kotlinx.android.synthetic.main.activity_main.*
-import java.security.KeyStore
 import java.util.*
-import java.util.function.ToDoubleBiFunction
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     var homeFragment: HomeFragment? = null
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var mineFragment: MineFragment? = null
     var mExitTime: Long = 0
     var toast: Toast? = null
+    lateinit var searchFragment: SearchFragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -45,6 +46,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 //todo 点击设置
             } else {
                 //todo 点击搜索
+                searchFragment = SearchFragment()
+                searchFragment.show(fragmentManager, SEARCH_TAG)
             }
 
         }
@@ -174,6 +177,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onPause()
         toast?.let { toast!!.cancel() }
     }
+
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (System.currentTimeMillis().minus(mExitTime) <= 3000) {

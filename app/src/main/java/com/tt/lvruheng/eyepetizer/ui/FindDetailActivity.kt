@@ -1,19 +1,16 @@
 package com.tt.lvruheng.eyepetizer.ui
 
-import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.adapter.RankAdapter
 import com.tt.lvruheng.eyepetizer.mvp.contract.FindDetailContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.FindDetailPresenter
-import io.reactivex.BackpressureOverflowStrategy
 import kotlinx.android.synthetic.main.activity_find_detail.*
 import java.util.regex.Pattern
 
@@ -76,13 +73,12 @@ class FindDetailActivity : AppCompatActivity(), FindDetailContract.View, SwipeRe
     }
 
     private fun setToolbar() {
-        intent.getStringExtra("name")?.let {
-            name = intent.getStringExtra("name")
-            tv_bar_title?.typeface = Typeface.createFromAsset(this.assets, "fonts/FZLanTingHeiS-DB1-GB-Regular.TTF")
-            tv_bar_title.text = name
-        }
         setSupportActionBar(toolbar)
         var bar = supportActionBar
+        intent.getStringExtra("name")?.let {
+            name = intent.getStringExtra("name")
+            bar?.title = name
+        }
         bar?.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {
             onBackPressed()
