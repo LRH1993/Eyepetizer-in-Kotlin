@@ -49,15 +49,7 @@
         android:layout_height="0.5dp"
         android:background="@color/divider"/>
 
-
-    <View
-        android:id="@+id/search_underline"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/divider"/>
-
     <TextView
-        android:id="@+id/tv_search_clean"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_corner_white"
@@ -68,14 +60,16 @@
         android:textSize="12sp"/>
 
     <TextView
+        android:id="@+id/tv_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="20dp"
-        android:text="—热门搜索词 —"/>
+        android:textColor="@color/black"
+        android:text="— 热门搜索词 —"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_search_history"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

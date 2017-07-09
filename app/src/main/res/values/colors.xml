@@ -8,4 +8,5 @@
     <color name="black">#000000</color>
     <color name="divider">#e6e6e6</color>
     <color name="transparent">#0000</color>
+    <color name="textbg">#8F9AA8</color>
 </resources>

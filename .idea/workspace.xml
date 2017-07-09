@@ -12,32 +12,29 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="back" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f770f1ce-334d-4035-8da0-5c5300854c13" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/CircularRevealAnim.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_bg_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_white.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/KeyBoardUtils.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sharpe_corner_gray.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_search.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/resourceHashesCache.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,36 +71,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchFragment.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="1040">
+              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding>
-                <element signature="e#43#429#0" expanded="true" />
+                <element signature="e#43#678#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt">
+      <file leaf-file-name="item_search.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_search.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="48" column="49" lean-forward="false" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
-              <folding>
-                <element signature="e#39#852#0" expanded="true" />
-                <marker date="1499567082000" expanded="true" signature="79:833" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_fragment.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1640">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -112,16 +96,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_find_detail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_find_detail.xml">
+      <file leaf-file-name="SearchAdapter.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="580">
+              <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+              <folding>
+                <element signature="e#44#397#0" expanded="true" />
+              </folding>
             </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -132,8 +115,8 @@
       <list>
         <option value="resourceFile" />
         <option value="Class" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Kotlin File" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -150,6 +133,7 @@
       <find>ge</find>
       <find>get</find>
       <find>backButton</find>
+      <find>mCircularRevealAnim.show</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer</dir>
@@ -1948,10 +1932,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/FindModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/presenter/FindPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/contract/FindContract.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/find_fragment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/hot_fragment.xml" />
@@ -1994,11 +1974,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/CircularRevealAnim.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_white.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/KeyBoardUtils.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/sharpe_corner_gray.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_search.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt" />
       </list>
     </option>
   </component>
@@ -2022,7 +2006,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2033,138 +2016,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eyepetizer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eyepetizer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2295,6 +2146,7 @@
       </pane>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2308,7 +2160,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.tt.lvruheng.eyepetizer" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="SearchEverywhereHistoryKey" value="base&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt&#10;main&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;ac&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_find_detail.xml&#10;homea&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;Finde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt&#10;Video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;findde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/presenter/FindDetailPresenter.kt&#10;apise&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;Find&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/FindDetailModel.kt&#10;rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;hotfr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;activity&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_main.xml&#10;homead&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;hotad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HotAdatpter.kt&#10;ranka&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;homebe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;videobe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/VideoBean.kt&#10;video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;Findf&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/FindFragment.kt&#10;mine&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/mine_fragment.xml&#10;Findad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FindAdapter.kt&#10;min&#9;null&#9;null&#10;ran&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;RANK&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;HO&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;hotmo&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/HotModel.kt&#10;api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;Homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;item&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/item_find.xml&#10;Hot&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;homebean&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;Api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Findbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.kt&#10;apiser&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;ho&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt" />
+    <property name="SearchEverywhereHistoryKey" value="searc&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt&#10;main&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;vide&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;maina&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;base&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt&#10;home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;ac&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_find_detail.xml&#10;homea&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;Finde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt&#10;Video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;findde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/presenter/FindDetailPresenter.kt&#10;apise&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;Find&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/FindDetailModel.kt&#10;rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;hotfr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;activity&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_main.xml&#10;homead&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;hotad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HotAdatpter.kt&#10;ranka&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;homebe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;videobe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/VideoBean.kt&#10;video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;Findf&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/FindFragment.kt&#10;mine&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/mine_fragment.xml&#10;Findad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FindAdapter.kt&#10;min&#9;null&#9;null&#10;ran&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;RANK&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;HO&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;hotmo&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/HotModel.kt&#10;api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;Homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;item&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/item_find.xml&#10;Hot&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;homebean&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;Api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Findbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.kt&#10;apiser&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;ho&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -2483,27 +2335,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2852,7 +2683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499522004870</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="搜索框基本页面逻辑">
+      <created>1499567583325</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1499567583325</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2866,7 +2704,6 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.505997" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2888,6 +2725,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2897,7 +2735,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962519" sideWeight="0.5156863" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.505997" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506204" sideWeight="0.494003" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32506204" sideWeight="0.494003" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2911,7 +2749,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2950,7 +2788,8 @@
     <MESSAGE value="视频播放逻辑" />
     <MESSAGE value="发现详情页mvp" />
     <MESSAGE value="发现详情页实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="发现详情页实现" />
+    <MESSAGE value="搜索框基本页面逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="搜索框基本页面逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2959,92 +2798,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/MineFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="110" lean-forward="false" selection-start-line="17" selection-start-column="110" selection-end-line="17" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mine_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="101" column="28" lean-forward="false" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/kotlin/kotlin-stdlib/1.1.2-4/kotlin-stdlib-1.1.2-4-sources.jar!/kotlin/Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="149" column="24" lean-forward="false" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/VideoBean.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/VideoBean.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HotAdatpter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="82" column="114" lean-forward="true" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_image_loading.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.shuyu/GSYVideoPlayer/1.6.8/b6f3e361d26508fb1ec1a607afee2f33b7fd15ba/GSYVideoPlayer-1.6.8-sources.jar!/com/shuyu/gsyvideoplayer/video/StandardGSYVideoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -3077,7 +2830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="144" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="144" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3107,14 +2859,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FindAdapter.kt">
@@ -3128,9 +2880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding>
-            <element signature="e#48#540#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3149,7 +2898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3182,7 +2930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3211,7 +2958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="727">
           <caret line="63" column="48" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3219,20 +2965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="1292" column="21" lean-forward="false" selection-start-line="1292" selection-start-column="21" selection-end-line="1292" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="144" column="27" lean-forward="false" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="99" selection-start-column="12" selection-end-line="100" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3247,27 +2979,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="12" column="67" lean-forward="false" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_white.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3275,7 +2991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3283,25 +2998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/CircularRevealAnim.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3309,15 +3005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="224" column="16" lean-forward="false" selection-start-line="224" selection-start-column="16" selection-end-line="224" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3325,14 +3012,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="99" selection-start-column="12" selection-end-line="100" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="70" column="111" lean-forward="false" selection-start-line="70" selection-start-column="71" selection-end-line="70" selection-end-column="111" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="565">
+          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -3340,23 +3047,130 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/inputmethod/InputMethodManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="781" column="19" lean-forward="false" selection-start-line="781" selection-start-column="19" selection-end-line="781" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/KeyBoardUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/CircularRevealAnim.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-488">
+          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-25/android/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1567" column="16" lean-forward="false" selection-start-line="1567" selection-start-column="16" selection-end-line="1567" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_search.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/25.4.0/cc1db0e29908067f78f1c55e7b80ad5e0fafab96/support-fragment-25.4.0-sources.jar!/android/support/v4/app/DialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-512">
+          <caret line="351" column="19" lean-forward="false" selection-start-line="351" selection-start-column="19" selection-end-line="351" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/action_download_cut.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/find_bg_selected.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/hot_bg_selected.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/mine_bg_selected.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_corner_white.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sharpe_corner_gray.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="48" column="49" lean-forward="false" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
-          <folding>
-            <element signature="e#39#852#0" expanded="true" />
-            <marker date="1499567082000" expanded="true" signature="79:833" ph="..." />
-          </folding>
+        <state relative-caret-position="594">
+          <caret line="193" column="5" lean-forward="false" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="1040">
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="e#43#429#0" expanded="true" />
+            <element signature="e#43#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding>
+            <element signature="e#44#397#0" expanded="true" />
           </folding>
         </state>
       </provider>
