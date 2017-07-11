@@ -7,6 +7,7 @@ import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
+import android.view.View
 import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.adapter.FeedAdapter
@@ -27,11 +28,17 @@ class WatchActivity : AppCompatActivity() {
         override fun handleMessage(msg: Message?) {
             super.handleMessage(msg)
             var list = msg?.data?.getParcelableArrayList<VideoBean>("beans")
-            if(mList.size>0){
-                mList.clear()
+            if(list?.size?.compareTo(0) == 0){
+                tv_hint.visibility = View.VISIBLE
+            }else{
+                tv_hint.visibility = View.GONE
+                if(mList.size>0){
+                    mList.clear()
+                }
+                list?.let { mList.addAll(it) }
+                mAdapter.notifyDataSetChanged()
             }
-            list?.let { mList.addAll(it) }
-            mAdapter.notifyDataSetChanged()
+
         }
     }
 

@@ -16,9 +16,23 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="@color/textbg"></View>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_hint"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="暂无内容"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
 </LinearLayout>
