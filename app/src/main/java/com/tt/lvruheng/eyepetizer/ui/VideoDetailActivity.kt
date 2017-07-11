@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity
 import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
-import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 import kotlinx.android.synthetic.main.activity_video_detail.*
 import android.graphics.BitmapFactory
 import com.bumptech.glide.Glide
@@ -22,7 +21,7 @@ import android.widget.ImageView
 import com.shuyu.gsyvideoplayer.GSYVideoPlayer
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
-import com.tt.lvruheng.eyepetizer.utils.VideoListener
+import com.tt.lvruheng.eyepetizer.utils.*
 import java.io.FileInputStream
 import java.io.FileNotFoundException
 import java.util.concurrent.ExecutionException
@@ -91,7 +90,23 @@ class VideoDetailActivity : AppCompatActivity() {
         tv_video_favor.text = bean.collect.toString()
         tv_video_share.text = bean.share.toString()
         tv_video_reply.text = bean.share.toString()
-
+        tv_video_download.setOnClickListener{
+            //点击下载
+            var url = bean.playUrl?.let { it1 -> SPUtils.getInstance(this,"downloads").getString(it1) }
+            if(url.equals("")){
+                var count = SPUtils.getInstance(this,"downloads").getInt("count")
+                if(count!=-1){
+                    count = count.inc()
+                }else{
+                    count = 1
+                }
+                SPUtils.getInstance(this,"downloads").put("count",count)
+                SPUtils.getInstance(this,"downloads").put(bean.playUrl.toString(),bean.playUrl.toString())
+                ObjectSaveUtils.saveObject(this,"bean$count",bean)
+            }else{
+                showToast("该视频已经缓存过了")
+            }
+        }
     }
 
     private fun prepareVideo() {
