@@ -1,16 +1,15 @@
 package com.tt.lvruheng.eyepetizer.adapter
 
 import android.content.Context
-import android.graphics.Typeface
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.google.android.flexbox.FlexboxLayoutManager
-
+import com.tt.lvruheng.eyepetizer.ui.ResultActivity
 
 
 /**
@@ -20,6 +19,7 @@ class SearchAdapter(context: Context, list: ArrayList<String>) : RecyclerView.Ad
     var context: Context? = null;
     var list: ArrayList<String>? = null
     var inflater: LayoutInflater? = null
+    var mDialogListener : onDialogDismiss? = null
 
     init {
         this.context = context
@@ -37,6 +37,13 @@ class SearchAdapter(context: Context, list: ArrayList<String>) : RecyclerView.Ad
         if (params is FlexboxLayoutManager.LayoutParams) {
             (holder?.tv_title?.layoutParams as FlexboxLayoutManager.LayoutParams).flexGrow = 1.0f
         }
+        holder?.itemView?.setOnClickListener {
+            var keyWord = list?.get(position)
+            var intent : Intent = Intent(context,ResultActivity::class.java)
+            intent.putExtra("keyWord",keyWord)
+            context?.startActivity(intent)
+            mDialogListener?.onDismiss()
+        }
     }
 
     override fun getItemCount(): Int {
@@ -47,5 +54,11 @@ class SearchAdapter(context: Context, list: ArrayList<String>) : RecyclerView.Ad
     class SearchViewHolder(itemView: View?, context: Context) : RecyclerView.ViewHolder(itemView) {
         var tv_title: TextView = itemView?.findViewById(R.id.tv_title) as TextView
         
+    }
+    interface onDialogDismiss{
+        fun onDismiss()
+    }
+    fun setOnDialogDismissListener(onDialogDismiss:onDialogDismiss){
+        mDialogListener = onDialogDismiss
     }
 }

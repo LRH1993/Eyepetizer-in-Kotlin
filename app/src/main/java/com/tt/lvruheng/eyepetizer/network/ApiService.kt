@@ -46,5 +46,8 @@ interface ApiService{
     @GET("v3/videos")
     fun getFindDetailMoreData(@Query("start") start :Int,@Query("num") num :Int,
                               @Query("categoryName") categoryName :String,@Query("strategy") strategy :String) : Observable<HotBean>
-
+    //获取关键词搜索相关信息
+    @GET("v1/search")
+    fun getSearchData(@Query("num") num :Int,@Query("query") query :String,
+                              @Query("start") start :Int) : Observable<HotBean>
 }
