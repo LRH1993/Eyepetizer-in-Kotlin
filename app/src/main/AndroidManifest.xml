@@ -33,6 +33,7 @@
         <activity android:name=".ui.FindDetailActivity"></activity>
         <activity android:name=".ui.ResultActivity"></activity>
         <activity android:name=".ui.WatchActivity"></activity>
+        <activity android:name=".ui.AdviseActivity"></activity>
     </application>
 
 </manifest>

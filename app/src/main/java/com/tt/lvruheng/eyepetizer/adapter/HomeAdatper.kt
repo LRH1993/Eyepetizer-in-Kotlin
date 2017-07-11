@@ -3,6 +3,7 @@ package com.tt.lvruheng.eyepetizer.adapter
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
+import android.os.Parcelable
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.util.Log.println
@@ -83,14 +84,19 @@ class HomeAdatper(context: Context,list: MutableList<HomeBean.IssueListBean.Item
             var reply = bean?.data?.consumption?.replyCount
             var time = System.currentTimeMillis()
             var videoBean  = VideoBean(photo,title,desc,duration,playUrl,category,blurred,collect ,share ,reply,time)
-            var count = SPUtils.getInstance(context!!,"beans").getInt("count")
-            if(count!=-1){
-                count.inc()
-            }else{
-                count = 1
+            var url = SPUtils.getInstance(context!!,"beans").getString(playUrl!!)
+            if(url.equals("")){
+                var count = SPUtils.getInstance(context!!,"beans").getInt("count")
+                if(count!=-1){
+                    count = count.inc()
+                }else{
+                    count = 1
+                }
+                SPUtils.getInstance(context!!,"beans").put("count",count)
+                SPUtils.getInstance(context!!,"beans").put(playUrl!!,playUrl)
+                ObjectSaveUtils.saveObject(context!!,"bean$count",videoBean)
             }
-            ObjectSaveUtils.saveObject(context!!,"bean$count",videoBean)
-            intent.putExtra("data",videoBean)
+            intent.putExtra("data",videoBean as Parcelable)
             context?.let { context -> context.startActivity(intent) }
         }
     }

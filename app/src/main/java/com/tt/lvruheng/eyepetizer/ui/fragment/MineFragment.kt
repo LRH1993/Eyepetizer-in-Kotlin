@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.view.View
 import com.tt.lvruheng.eyepetizer.R
+import com.tt.lvruheng.eyepetizer.ui.AdviseActivity
 import com.tt.lvruheng.eyepetizer.ui.WatchActivity
 import kotlinx.android.synthetic.main.mine_fragment.*
 
@@ -15,6 +16,10 @@ class MineFragment : BaseFragment(),View.OnClickListener{
         when(v?.id){
             R.id.tv_watch ->{
                 var intent = Intent(activity,WatchActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_advise ->{
+                var intent = Intent(activity,AdviseActivity::class.java)
                 startActivity(intent)
             }
         }
