@@ -16,6 +16,8 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
+import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
+import com.tt.lvruheng.eyepetizer.utils.SPUtils
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.xml.datatype.Duration
@@ -79,7 +81,15 @@ class HomeAdatper(context: Context,list: MutableList<HomeBean.IssueListBean.Item
             var collect = bean?.data?.consumption?.collectionCount
             var share = bean?.data?.consumption?.shareCount
             var reply = bean?.data?.consumption?.replyCount
-            var videoBean  = VideoBean(photo,title,desc,duration,playUrl,category,blurred,collect ,share ,reply)
+            var time = System.currentTimeMillis()
+            var videoBean  = VideoBean(photo,title,desc,duration,playUrl,category,blurred,collect ,share ,reply,time)
+            var count = SPUtils.getInstance(context!!,"beans").getInt("count")
+            if(count!=-1){
+                count.inc()
+            }else{
+                count = 1
+            }
+            ObjectSaveUtils.saveObject(context!!,"bean$count",videoBean)
             intent.putExtra("data",videoBean)
             context?.let { context -> context.startActivity(intent) }
         }

@@ -14,6 +14,8 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
+import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
+import com.tt.lvruheng.eyepetizer.utils.SPUtils
 import java.text.SimpleDateFormat
 
 /**
@@ -72,7 +74,15 @@ class FeedAdapter(context: Context, list: ArrayList<HotBean.ItemListBean.DataBea
             var collect = list?.get(position)?.consumption?.collectionCount
             var share = list?.get(position)?.consumption?.shareCount
             var reply = list?.get(position)?.consumption?.replyCount
-            var videoBean  = VideoBean(photoUrl,title,desc,duration,playUrl,category,blurred,collect ,share ,reply)
+            var time = System.currentTimeMillis()
+            var videoBean  = VideoBean(photoUrl,title,desc,duration,playUrl,category,blurred,collect ,share ,reply,time)
+            var count = SPUtils.getInstance(context!!,"beans").getInt("count")
+            if(count!=-1){
+                count.inc()
+            }else{
+                count = 1
+            }
+            ObjectSaveUtils.saveObject(context!!,"bean$count",videoBean)
             intent.putExtra("data",videoBean)
             context?.let { context -> context.startActivity(intent) }
         }

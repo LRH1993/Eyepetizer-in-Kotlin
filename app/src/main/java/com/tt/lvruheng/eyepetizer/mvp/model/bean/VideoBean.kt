@@ -8,7 +8,7 @@ import android.os.Parcelable
  */
 data class VideoBean(var feed:String?,var title:String?,var description:String?,
                      var duration: Long?,var playUrl: String?,var category: String?,
-                     var blurred : String?,var collect:Int?,var share:Int?,var reply:Int?) : Parcelable {
+                     var blurred : String?,var collect:Int?,var share:Int?,var reply:Int?,var time:Long) : Parcelable {
     companion object {
         @JvmField val CREATOR: Parcelable.Creator<VideoBean> = object : Parcelable.Creator<VideoBean> {
             override fun createFromParcel(source: Parcel): VideoBean = VideoBean(source)
@@ -26,7 +26,8 @@ data class VideoBean(var feed:String?,var title:String?,var description:String?,
     source.readString(),
     source.readValue(Int::class.java.classLoader) as Int?,
     source.readValue(Int::class.java.classLoader) as Int?,
-    source.readValue(Int::class.java.classLoader) as Int?
+    source.readValue(Int::class.java.classLoader) as Int?,
+    source.readLong()
     )
 
     override fun describeContents() = 0
@@ -42,5 +43,6 @@ data class VideoBean(var feed:String?,var title:String?,var description:String?,
         dest.writeValue(collect)
         dest.writeValue(share)
         dest.writeValue(reply)
+        dest.writeLong(time)
     }
 }

@@ -32,6 +32,7 @@
             android:theme="@style/Video"></activity>
         <activity android:name=".ui.FindDetailActivity"></activity>
         <activity android:name=".ui.ResultActivity"></activity>
+        <activity android:name=".ui.WatchActivity"></activity>
     </application>
 
 </manifest>
