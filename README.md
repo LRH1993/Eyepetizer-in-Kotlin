@@ -1,7 +1,7 @@
 # Eyepetizer-in-Kotlin
 >Google在今年的IO大会上宣布，将Android开发的官方语言更换为Kotlin。作为紧跟潮流的弄潮儿，对kotlin稍做了解后，发现其有优秀的特性，所以就开始了学习，而Eyepetizer-in-Kotlin便是对kotlin进行学习后的阶段性成果。
 
-##一、screenshot
+## 一、screenshot
 ### 1.启动界面
 ![](http://upload-images.jianshu.io/upload_images/3985563-90a1eea8d8618042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ### 2.主界面
