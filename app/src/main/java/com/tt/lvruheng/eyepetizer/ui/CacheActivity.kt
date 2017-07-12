@@ -4,6 +4,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
@@ -14,6 +15,7 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils
 import kotlinx.android.synthetic.main.activity_watch.*
+import zlc.season.rxdownload2.RxDownload
 
 /**
  * Created by lvruheng on 2017/7/12.
@@ -46,7 +48,34 @@ class CacheActivity : AppCompatActivity() {
         DataAsyncTask(mHandler,this).execute()
         recyclerView.layoutManager = LinearLayoutManager(this)
         mAdapter = DownloadAdapter(this, mList)
+        mAdapter.setOnLongClickListener(object : DownloadAdapter.OnLongClickListener{
+            override fun onLongClick(position: Int) {
+                addDialog(position)
+            }
+        })
+
         recyclerView.adapter = mAdapter
+    }
+
+    private fun addDialog(position: Int) {
+        var builder = AlertDialog.Builder(this)
+        var dialog = builder.create()
+        builder.setMessage("是否删除当前视频")
+        builder.setNegativeButton("否",{
+            dialog, which ->
+            dialog.dismiss()
+        })
+        builder.setPositiveButton("是",{
+           dialog, which ->
+            deleteDownload(position)
+        })
+        builder.show()
+    }
+
+    private fun deleteDownload(position:Int) {
+        RxDownload.getInstance(this@CacheActivity).deleteServiceDownload(mList[position].playUrl, true).subscribe()
+        mList.removeAt(position)
+        mAdapter.notifyItemRemoved(position)
     }
 
     private fun setToolbar() {

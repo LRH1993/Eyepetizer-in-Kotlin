@@ -17,6 +17,7 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils
+import io.reactivex.disposables.Disposable
 import zlc.season.rxdownload2.entity.DownloadFlag
 import zlc.season.rxdownload2.RxDownload
 
@@ -25,10 +26,12 @@ import zlc.season.rxdownload2.RxDownload
  * Created by lvruheng on 2017/7/7.
  */
 class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerView.Adapter<DownloadAdapter.DownloadViewHolder>() {
+    lateinit var mOnLongLisenter: OnLongClickListener
     var context: Context? = null;
     var list: ArrayList<VideoBean>? = null
     var inflater: LayoutInflater? = null
     var isDownload = false
+    lateinit var disposable: Disposable
 
     init {
         this.context = context
@@ -55,20 +58,20 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
         getDownloadState(list?.get(position)?.playUrl, holder)
         if (isDownload) {
             holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
-        }else{
+        } else {
             holder?.iv_download_state?.setImageResource(R.drawable.icon_download_start)
         }
         holder?.iv_download_state?.setOnClickListener {
             if (isDownload) {
                 isDownload = false
-                SPUtils.getInstance(context!!,"download_state").put(list?.get(position)?.playUrl!!,false)
+                SPUtils.getInstance(context!!, "download_state").put(list?.get(position)?.playUrl!!, false)
                 holder?.iv_download_state?.setImageResource(R.drawable.icon_download_start)
                 RxDownload.getInstance(context).pauseServiceDownload(list?.get(position)?.playUrl).subscribe()
             } else {
                 isDownload = true
-                SPUtils.getInstance(context!!,"download_state").put(list?.get(position)?.playUrl!!,true)
+                SPUtils.getInstance(context!!, "download_state").put(list?.get(position)?.playUrl!!, true)
                 holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
-                addMission(list?.get(position)?.playUrl,position+1)
+                addMission(list?.get(position)?.playUrl, position + 1)
             }
         }
         holder?.itemView?.setOnClickListener {
@@ -86,10 +89,14 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
             intent.putExtra("data", videoBean as Parcelable)
             context?.let { context -> context.startActivity(intent) }
         }
+        holder?.itemView?.setOnLongClickListener {
+            mOnLongLisenter.onLongClick(position)
+            true
+        }
     }
 
     private fun getDownloadState(playUrl: String?, holder: DownloadViewHolder?) {
-        val disposable = RxDownload.getInstance(context).receiveDownloadStatus(playUrl)
+        disposable = RxDownload.getInstance(context).receiveDownloadStatus(playUrl)
                 .subscribe { event ->
                     //当事件为Failed时, 才会有异常信息, 其余时候为null.
                     if (event.flag == DownloadFlag.FAILED) {
@@ -99,10 +106,13 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
                     var downloadStatus = event.downloadStatus
                     var percent = downloadStatus.percentNumber
                     if (percent == 100L) {
+                        if(!disposable.isDisposed&&disposable!= null){
+                            disposable.dispose()
+                        }
                         holder?.iv_download_state?.visibility = View.GONE
                         holder?.tv_detail?.text = "已缓存"
                         isDownload = false
-                        SPUtils.getInstance(context!!,"download_state").put(playUrl.toString(),false)
+                        SPUtils.getInstance(context!!, "download_state").put(playUrl.toString(), false)
                     } else {
                         if (holder?.iv_download_state?.visibility != View.VISIBLE) {
                             holder?.iv_download_state?.visibility = View.VISIBLE
@@ -116,10 +126,11 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
 
                     }
                 }
+
     }
 
     private fun addMission(playUrl: String?, count: Int) {
-        RxDownload.getInstance(context).serviceDownload(playUrl,"download$count").subscribe({
+        RxDownload.getInstance(context).serviceDownload(playUrl, "download$count").subscribe({
             Toast.makeText(context, "开始下载", Toast.LENGTH_SHORT).show()
         }, {
             Toast.makeText(context, "添加任务失败", Toast.LENGTH_SHORT).show()
@@ -135,5 +146,13 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
         init {
             tv_title?.typeface = Typeface.createFromAsset(context?.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
         }
+    }
+
+    interface OnLongClickListener {
+        fun onLongClick(position: Int)
+    }
+
+    fun setOnLongClickListener(onLongClickListener: OnLongClickListener) {
+        mOnLongLisenter = onLongClickListener
     }
 }
