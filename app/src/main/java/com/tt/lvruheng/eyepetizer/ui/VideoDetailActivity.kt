@@ -6,7 +6,6 @@ import android.content.res.Configuration
 import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import kotlinx.android.synthetic.main.activity_video_detail.*
@@ -15,13 +14,17 @@ import com.bumptech.glide.Glide
 import android.os.AsyncTask
 import android.os.Handler
 import android.os.Message
+import android.system.Os.accept
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import com.shuyu.gsyvideoplayer.GSYVideoPlayer
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
 import com.tt.lvruheng.eyepetizer.utils.*
+import io.reactivex.functions.Consumer
+import zlc.season.rxdownload2.RxDownload
 import java.io.FileInputStream
 import java.io.FileNotFoundException
 import java.util.concurrent.ExecutionException
@@ -41,6 +44,7 @@ class VideoDetailActivity : AppCompatActivity() {
     var isPlay: Boolean = false
     var isPause: Boolean = false
     lateinit var orientationUtils: OrientationUtils
+    lateinit var  mRxDownloadInstance : RxDownload
     var mHandler: Handler = object : Handler() {
         override fun handleMessage(msg: Message?) {
             super.handleMessage(msg)
@@ -49,8 +53,6 @@ class VideoDetailActivity : AppCompatActivity() {
                     Log.e("video", "setImage")
                     gsy_player.setThumbImageView(imageView)
                 }
-
-
             }
         }
     }
@@ -103,10 +105,22 @@ class VideoDetailActivity : AppCompatActivity() {
                 SPUtils.getInstance(this,"downloads").put("count",count)
                 SPUtils.getInstance(this,"downloads").put(bean.playUrl.toString(),bean.playUrl.toString())
                 ObjectSaveUtils.saveObject(this,"bean$count",bean)
+                addMission(bean.playUrl)
             }else{
                 showToast("该视频已经缓存过了")
             }
         }
+    }
+
+    private fun addMission(playUrl: String?) {
+        if(mRxDownloadInstance== null){
+            mRxDownloadInstance = RxDownload.getInstance(this)
+        }
+        mRxDownloadInstance.serviceDownload(playUrl).subscribe({
+            showToast("开始下载")
+        }, {
+            showToast("添加任务失败")
+        })
     }
 
     private fun prepareVideo() {
