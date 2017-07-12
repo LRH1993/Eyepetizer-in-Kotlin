@@ -29,7 +29,7 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
     var context: Context? = null;
     var list: ArrayList<VideoBean>? = null
     var inflater: LayoutInflater? = null
-    var isDownload: Boolean = false
+    var isDownload = false
 
     init {
         this.context = context
@@ -52,7 +52,11 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
         holder?.tv_title?.text = title
         var category = list?.get(position)?.category
         var duration = list?.get(position)?.duration
+        isDownload = SPUtils.getInstance(context!!, "download_state").getBoolean(list?.get(position)?.playUrl!!)
         getDownloadState(list?.get(position)?.playUrl, holder)
+        if (isDownload) {
+            holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
+        }
         holder?.iv_download_state?.setOnClickListener {
             if (isDownload) {
                 isDownload = false
@@ -96,10 +100,16 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
                         holder?.tv_detail?.text = "已缓存"
                         isDownload = false
                     } else {
-                        holder?.iv_download_state?.visibility = View.VISIBLE
-                        holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
-                        holder?.tv_detail?.text = "缓存中 / $percent%"
-                        isDownload = true
+                        if (holder?.iv_download_state?.visibility != View.VISIBLE) {
+                            holder?.iv_download_state?.visibility = View.VISIBLE
+                        }
+                        if (isDownload) {
+                            holder?.tv_detail?.text = "缓存中 / $percent%"
+                        } else {
+                            holder?.tv_detail?.text = "已暂停 / $percent%"
+                        }
+
+
                     }
                 }
     }

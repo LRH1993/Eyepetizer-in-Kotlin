@@ -118,6 +118,7 @@ class VideoDetailActivity : AppCompatActivity() {
         }
         mRxDownloadInstance.serviceDownload(playUrl).subscribe({
             showToast("开始下载")
+            SPUtils.getInstance(this,"download_state").put(playUrl.toString(),true)
         }, {
             showToast("添加任务失败")
         })
