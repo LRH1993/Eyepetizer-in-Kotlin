@@ -27,11 +27,11 @@ class CacheActivity : AppCompatActivity() {
         override fun handleMessage(msg: Message?) {
             super.handleMessage(msg)
             var list = msg?.data?.getParcelableArrayList<VideoBean>("beans")
-            if(list?.size?.compareTo(0) == 0){
+            if (list?.size?.compareTo(0) == 0) {
                 tv_hint.visibility = View.VISIBLE
-            }else{
+            } else {
                 tv_hint.visibility = View.GONE
-                if(mList.size>0){
+                if (mList.size > 0) {
                     mList.clear()
                 }
                 list?.let { mList.addAll(it) }
@@ -40,15 +40,16 @@ class CacheActivity : AppCompatActivity() {
 
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_watch)
         ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
         setToolbar()
-        DataAsyncTask(mHandler,this).execute()
+        DataAsyncTask(mHandler, this).execute()
         recyclerView.layoutManager = LinearLayoutManager(this)
         mAdapter = DownloadAdapter(this, mList)
-        mAdapter.setOnLongClickListener(object : DownloadAdapter.OnLongClickListener{
+        mAdapter.setOnLongClickListener(object : DownloadAdapter.OnLongClickListener {
             override fun onLongClick(position: Int) {
                 addDialog(position)
             }
@@ -61,19 +62,22 @@ class CacheActivity : AppCompatActivity() {
         var builder = AlertDialog.Builder(this)
         var dialog = builder.create()
         builder.setMessage("是否删除当前视频")
-        builder.setNegativeButton("否",{
+        builder.setNegativeButton("否", {
             dialog, which ->
             dialog.dismiss()
         })
-        builder.setPositiveButton("是",{
-           dialog, which ->
+        builder.setPositiveButton("是", {
+            dialog, which ->
             deleteDownload(position)
         })
         builder.show()
     }
 
-    private fun deleteDownload(position:Int) {
+    private fun deleteDownload(position: Int) {
         RxDownload.getInstance(this@CacheActivity).deleteServiceDownload(mList[position].playUrl, true).subscribe()
+        SPUtils.getInstance(this, "downloads").put(mList[position].playUrl.toString(), "")
+        var count = position + 1
+        ObjectSaveUtils.deleteFile("download$count", this)
         mList.removeAt(position)
         mAdapter.notifyItemRemoved(position)
     }
@@ -96,7 +100,12 @@ class CacheActivity : AppCompatActivity() {
             var count: Int = SPUtils.getInstance(activity, "downloads").getInt("count")
             var i = 1
             while (i.compareTo(count) <= 0) {
-                var bean : VideoBean = ObjectSaveUtils.getValue(activity, "download$i") as VideoBean
+                var bean: VideoBean
+                if (ObjectSaveUtils.getValue(activity, "download$i") == null) {
+                    break
+                } else {
+                    bean = ObjectSaveUtils.getValue(activity, "download$i") as VideoBean
+                }
                 list.add(bean)
                 i++
             }
@@ -107,7 +116,7 @@ class CacheActivity : AppCompatActivity() {
             super.onPostExecute(result)
             var message = handler.obtainMessage()
             var bundle = Bundle()
-            bundle.putParcelableArrayList("beans",result)
+            bundle.putParcelableArrayList("beans", result)
             message.data = bundle
             handler.sendMessage(message)
         }

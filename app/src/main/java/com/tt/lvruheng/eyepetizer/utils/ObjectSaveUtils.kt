@@ -30,6 +30,9 @@ object ObjectSaveUtils{
         var ois: ObjectInputStream? = null
         try {
             fis = context.openFileInput(name)
+            if(fis==null){
+                return null
+            }
             ois = ObjectInputStream(fis)
             return ois.readObject()
         } catch (e: Exception) {
@@ -53,5 +56,8 @@ object ObjectSaveUtils{
             }
         }
         return null
+    }
+    fun deleteFile(name: String,context: Context){
+        context.deleteFile(name)
     }
 }
