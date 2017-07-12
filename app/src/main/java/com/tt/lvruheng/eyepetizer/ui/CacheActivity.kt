@@ -102,7 +102,7 @@ class CacheActivity : AppCompatActivity() {
             while (i.compareTo(count) <= 0) {
                 var bean: VideoBean
                 if (ObjectSaveUtils.getValue(activity, "download$i") == null) {
-                    break
+                    continue
                 } else {
                     bean = ObjectSaveUtils.getValue(activity, "download$i") as VideoBean
                 }
