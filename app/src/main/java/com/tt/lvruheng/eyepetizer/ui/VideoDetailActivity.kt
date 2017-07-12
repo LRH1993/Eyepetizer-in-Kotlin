@@ -14,16 +14,13 @@ import com.bumptech.glide.Glide
 import android.os.AsyncTask
 import android.os.Handler
 import android.os.Message
-import android.system.Os.accept
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
 import com.shuyu.gsyvideoplayer.GSYVideoPlayer
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
 import com.tt.lvruheng.eyepetizer.utils.*
-import io.reactivex.functions.Consumer
 import zlc.season.rxdownload2.RxDownload
 import java.io.FileInputStream
 import java.io.FileNotFoundException
@@ -44,7 +41,6 @@ class VideoDetailActivity : AppCompatActivity() {
     var isPlay: Boolean = false
     var isPause: Boolean = false
     lateinit var orientationUtils: OrientationUtils
-    lateinit var  mRxDownloadInstance : RxDownload
     var mHandler: Handler = object : Handler() {
         override fun handleMessage(msg: Message?) {
             super.handleMessage(msg)
@@ -92,33 +88,30 @@ class VideoDetailActivity : AppCompatActivity() {
         tv_video_favor.text = bean.collect.toString()
         tv_video_share.text = bean.share.toString()
         tv_video_reply.text = bean.share.toString()
-        tv_video_download.setOnClickListener{
+        tv_video_download.setOnClickListener {
             //点击下载
-            var url = bean.playUrl?.let { it1 -> SPUtils.getInstance(this,"downloads").getString(it1) }
-            if(url.equals("")){
-                var count = SPUtils.getInstance(this,"downloads").getInt("count")
-                if(count!=-1){
+            var url = bean.playUrl?.let { it1 -> SPUtils.getInstance(this, "downloads").getString(it1) }
+            if (url.equals("")) {
+                var count = SPUtils.getInstance(this, "downloads").getInt("count")
+                if (count != -1) {
                     count = count.inc()
-                }else{
+                } else {
                     count = 1
                 }
-                SPUtils.getInstance(this,"downloads").put("count",count)
-                SPUtils.getInstance(this,"downloads").put(bean.playUrl.toString(),bean.playUrl.toString())
-                ObjectSaveUtils.saveObject(this,"bean$count",bean)
-                addMission(bean.playUrl)
-            }else{
+                SPUtils.getInstance(this, "downloads").put("count", count)
+                ObjectSaveUtils.saveObject(this, "download$count", bean)
+                addMission(bean.playUrl,count)
+            } else {
                 showToast("该视频已经缓存过了")
             }
         }
     }
 
-    private fun addMission(playUrl: String?) {
-        if(mRxDownloadInstance== null){
-            mRxDownloadInstance = RxDownload.getInstance(this)
-        }
-        mRxDownloadInstance.serviceDownload(playUrl).subscribe({
+    private fun addMission(playUrl: String?, count: Int) {
+        RxDownload.getInstance(this).serviceDownload(playUrl,"download$count").subscribe({
             showToast("开始下载")
-            SPUtils.getInstance(this,"download_state").put(playUrl.toString(),true)
+            SPUtils.getInstance(this, "downloads").put(bean.playUrl.toString(),bean.playUrl.toString())
+            SPUtils.getInstance(this, "download_state").put(playUrl.toString(), true)
         }, {
             showToast("添加任务失败")
         })

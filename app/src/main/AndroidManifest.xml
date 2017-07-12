@@ -35,6 +35,7 @@
         <activity android:name=".ui.ResultActivity"></activity>
         <activity android:name=".ui.WatchActivity"></activity>
         <activity android:name=".ui.AdviseActivity"></activity>
+        <activity android:name=".ui.CacheActivity"></activity>
     </application>
 
 </manifest>

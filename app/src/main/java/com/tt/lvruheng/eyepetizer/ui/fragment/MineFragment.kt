@@ -5,6 +5,7 @@ import android.graphics.Typeface
 import android.view.View
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.ui.AdviseActivity
+import com.tt.lvruheng.eyepetizer.ui.CacheActivity
 import com.tt.lvruheng.eyepetizer.ui.WatchActivity
 import kotlinx.android.synthetic.main.mine_fragment.*
 
@@ -20,6 +21,10 @@ class MineFragment : BaseFragment(),View.OnClickListener{
             }
             R.id.tv_advise ->{
                 var intent = Intent(activity,AdviseActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_save ->{
+                var intent = Intent(activity,CacheActivity::class.java)
                 startActivity(intent)
             }
         }

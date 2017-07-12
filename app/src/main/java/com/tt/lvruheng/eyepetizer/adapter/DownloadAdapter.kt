@@ -17,7 +17,6 @@ import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
 import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils
-import com.tt.lvruheng.eyepetizer.utils.showToast
 import zlc.season.rxdownload2.entity.DownloadFlag
 import zlc.season.rxdownload2.RxDownload
 
@@ -56,16 +55,20 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
         getDownloadState(list?.get(position)?.playUrl, holder)
         if (isDownload) {
             holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
+        }else{
+            holder?.iv_download_state?.setImageResource(R.drawable.icon_download_start)
         }
         holder?.iv_download_state?.setOnClickListener {
             if (isDownload) {
                 isDownload = false
-                holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
+                SPUtils.getInstance(context!!,"download_state").put(list?.get(position)?.playUrl!!,false)
+                holder?.iv_download_state?.setImageResource(R.drawable.icon_download_start)
                 RxDownload.getInstance(context).pauseServiceDownload(list?.get(position)?.playUrl).subscribe()
             } else {
                 isDownload = true
-                holder?.iv_download_state?.setImageResource(R.drawable.icon_download_start)
-                addMission(list?.get(position)?.playUrl)
+                SPUtils.getInstance(context!!,"download_state").put(list?.get(position)?.playUrl!!,true)
+                holder?.iv_download_state?.setImageResource(R.drawable.icon_download_stop)
+                addMission(list?.get(position)?.playUrl,position+1)
             }
         }
         holder?.itemView?.setOnClickListener {
@@ -99,6 +102,7 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
                         holder?.iv_download_state?.visibility = View.GONE
                         holder?.tv_detail?.text = "已缓存"
                         isDownload = false
+                        SPUtils.getInstance(context!!,"download_state").put(playUrl.toString(),false)
                     } else {
                         if (holder?.iv_download_state?.visibility != View.VISIBLE) {
                             holder?.iv_download_state?.visibility = View.VISIBLE
@@ -114,8 +118,8 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
                 }
     }
 
-    private fun addMission(playUrl: String?) {
-        RxDownload.getInstance(context).serviceDownload(playUrl).subscribe({
+    private fun addMission(playUrl: String?, count: Int) {
+        RxDownload.getInstance(context).serviceDownload(playUrl,"download$count").subscribe({
             Toast.makeText(context, "开始下载", Toast.LENGTH_SHORT).show()
         }, {
             Toast.makeText(context, "添加任务失败", Toast.LENGTH_SHORT).show()
