@@ -3,6 +3,7 @@ package com.tt.lvruheng.eyepetizer.adapter
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Parcelable
 import android.support.v7.widget.RecyclerView
 import android.util.Log
@@ -31,6 +32,7 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
     var list: ArrayList<VideoBean>? = null
     var inflater: LayoutInflater? = null
     var isDownload = false
+    var hasLoaded = false
     lateinit var disposable: Disposable
 
     init {
@@ -87,6 +89,12 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
             var videoBean = VideoBean(photoUrl, title, desc, duration, playUrl, category, blurred, collect, share, reply, time)
             var url = SPUtils.getInstance(context!!, "beans").getString(playUrl!!)
             intent.putExtra("data", videoBean as Parcelable)
+            if(hasLoaded){
+                var files = RxDownload.getInstance(context).getRealFiles(playUrl)
+                var uri = Uri.fromFile(files!![0])
+                intent.putExtra("loaclFile",uri.toString())
+            }
+
             context?.let { context -> context.startActivity(intent) }
         }
         holder?.itemView?.setOnLongClickListener {
@@ -109,6 +117,7 @@ class DownloadAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerVi
                         if(!disposable.isDisposed&&disposable!= null){
                             disposable.dispose()
                         }
+                        hasLoaded = true
                         holder?.iv_download_state?.visibility = View.GONE
                         holder?.tv_detail?.text = "已缓存"
                         isDownload = false

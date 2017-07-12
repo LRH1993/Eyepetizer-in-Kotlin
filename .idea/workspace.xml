@@ -19,15 +19,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/javaCompile/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-rc-1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/CacheActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/CacheActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,63 +62,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CacheActivity.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/CacheActivity.kt">
+      <file leaf-file-name="VideoDetailActivity.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="121" column="52" lean-forward="false" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
               <folding>
-                <element signature="e#39#703#0" expanded="true" />
+                <element signature="e#39#1024#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_watch.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_watch.xml">
+      <file leaf-file-name="DownloadAdapter.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WatchActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/WatchActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="62" column="9" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="391">
+              <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
               <folding>
-                <element signature="e#39#752#0" expanded="true" />
+                <element signature="e#44#829#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchAdapter.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="60" column="66" lean-forward="false" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_download.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_download.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -1997,9 +1959,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/MineFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_download.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/CacheActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt" />
       </list>
     </option>
   </component>
@@ -2241,7 +2203,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.tt.lvruheng.eyepetizer" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="SearchEverywhereHistoryKey" value="minf&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/MineFragment.kt&#10;watch&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/WatchActivity.kt&#10;vide&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;searc&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt&#10;main&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;maina&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;base&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt&#10;ac&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_find_detail.xml&#10;homea&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;Finde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt&#10;Video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;findde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/presenter/FindDetailPresenter.kt&#10;apise&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;Find&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/FindDetailModel.kt&#10;rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;hotfr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;activity&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_main.xml&#10;homead&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;hotad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HotAdatpter.kt&#10;ranka&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;homebe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;videobe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/VideoBean.kt&#10;Findf&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/FindFragment.kt&#10;mine&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/mine_fragment.xml&#10;Findad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FindAdapter.kt&#10;min&#9;null&#9;null&#10;ran&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;RANK&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;HO&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;hotmo&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/HotModel.kt&#10;api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;Homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;item&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/item_find.xml&#10;Hot&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;homebean&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;Api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Findbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.kt&#10;apiser&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;ho&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt" />
+    <property name="SearchEverywhereHistoryKey" value="vide&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;do&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt&#10;minf&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/MineFragment.kt&#10;watch&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/WatchActivity.kt&#10;home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;searc&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt&#10;main&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;maina&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt&#10;base&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/BaseFragment.kt&#10;ac&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_find_detail.xml&#10;homea&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;Finde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt&#10;Video&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt&#10;homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;findde&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/presenter/FindDetailPresenter.kt&#10;apise&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;Find&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/FindDetailModel.kt&#10;rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;hotfr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;activity&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/activity_main.xml&#10;homead&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;hotad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HotAdatpter.kt&#10;ranka&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;homebe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;videobe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/VideoBean.kt&#10;Findf&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/FindFragment.kt&#10;mine&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/mine_fragment.xml&#10;Findad&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FindAdapter.kt&#10;min&#9;null&#9;null&#10;ran&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Home&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt&#10;RANK&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt&#10;Hotbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HotBean.kt&#10;HO&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;hotmo&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/HotModel.kt&#10;api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Rank&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/RankFragment.kt&#10;Homefr&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt&#10;item&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/res/layout/item_find.xml&#10;Hot&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HotFragment.kt&#10;homebean&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/HomeBean.kt&#10;Api&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/api.kt&#10;Findbe&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/mvp/model/bean/FindBean.kt&#10;apiser&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/network/ApiService.kt&#10;ho&#9;FILE&#9;file:///Users/lvruheng/Documents/GitHub/Eyepetizer-in-Kotlin/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/HomeFragment.kt" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -2855,7 +2817,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499823685355</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="删除视频逻辑">
+      <created>1499825122867</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1499825122867</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2878,7 +2847,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819743" sideWeight="0.48431373" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23819743" sideWeight="0.48431373" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2899,8 +2868,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962519" sideWeight="0.5156863" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.505997" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32506204" sideWeight="0.494003" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506204" sideWeight="0.50858366" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506204" sideWeight="0.4914163" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2914,13 +2883,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630274" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962519" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819743" sideWeight="0.48431373" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819743" sideWeight="0.48431373" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2931,7 +2900,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="发现页面实现" />
     <MESSAGE value="tab+viewpager" />
     <MESSAGE value="热门排行bean" />
     <MESSAGE value="热门mvp实现" />
@@ -2956,7 +2924,8 @@
     <MESSAGE value="DownloadAdapter实现" />
     <MESSAGE value="添加下载状态标记" />
     <MESSAGE value="缓存下载逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="缓存下载逻辑" />
+    <MESSAGE value="删除视频逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除视频逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3305,24 +3274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/zlc.season/rxdownload2/2.0.4/b941d45b949fd259f2ca3762b890a985233afec4/rxdownload2-2.0.4-sources.jar!/zlc/season/rxdownload2/RxDownload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="470" column="5" lean-forward="true" selection-start-line="470" selection-start-column="5" selection-end-line="470" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="110" column="76" lean-forward="false" selection-start-line="110" selection-start-column="76" selection-end-line="110" selection-end-column="76" />
-          <folding>
-            <element signature="e#39#1004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FeedAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1240">
@@ -3357,16 +3308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="110" column="25" lean-forward="true" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
-          <folding>
-            <element signature="e#44#806#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/WatchActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -3379,10 +3320,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/CacheActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="1440">
           <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="e#39#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/zlc.season/rxdownload2/2.0.4/b941d45b949fd259f2ca3762b890a985233afec4/rxdownload2-2.0.4-sources.jar!/zlc/season/rxdownload2/RxDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="108" column="18" lean-forward="false" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+          <folding>
+            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#3505#3506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="e#44#829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="121" column="52" lean-forward="false" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
+          <folding>
+            <element signature="e#39#1024#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,6 +24,7 @@ import com.tt.lvruheng.eyepetizer.utils.*
 import zlc.season.rxdownload2.RxDownload
 import java.io.FileInputStream
 import java.io.FileNotFoundException
+import java.net.URI
 import java.util.concurrent.ExecutionException
 
 
@@ -118,7 +119,13 @@ class VideoDetailActivity : AppCompatActivity() {
     }
 
     private fun prepareVideo() {
-        gsy_player.setUp(bean.playUrl, false, null, null)
+        var uri = intent.getStringExtra("loaclFile")
+        if(uri!=null){
+            Log.e("uri",uri)
+            gsy_player.setUp(uri, false, null, null)
+        }else{
+            gsy_player.setUp(bean.playUrl, false, null, null)
+        }
         //增加封面
         imageView = ImageView(this)
         imageView.scaleType = ImageView.ScaleType.CENTER_CROP
