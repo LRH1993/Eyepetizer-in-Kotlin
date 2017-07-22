@@ -20,6 +20,9 @@ import com.tt.lvruheng.eyepetizer.ui.fragment.MineFragment
 import com.tt.lvruheng.eyepetizer.utils.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import android.view.WindowManager
+
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     var homeFragment: HomeFragment? = null
@@ -33,6 +36,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
+        val window = window
+        val params = window.attributes
+        params.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        window.attributes = params
         setRadioButton()
         initToolbar()
         initFragment(savedInstanceState)
