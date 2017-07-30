@@ -1,5 +1,5 @@
 # Eyepetizer-in-Kotlin
->Google在今年的IO大会上宣布，将Android开发的官方语言更换为Kotlin。作为紧跟潮流的弄潮儿，对kotlin稍做了解后，发现其有优秀的特性，所以就开始了学习，而Eyepetizer-in-Kotlin便是对kotlin进行学习后的阶段性成果。
+>Google在今年的IO大会上宣布，将Android开发的官方语言更换为Kotlin。作为紧跟潮流的弄潮儿，对kotlin稍做了解后，发现其优秀的特性，所以就开始了学习，而Eyepetizer-in-Kotlin便是对kotlin进行学习后的阶段性成果。
 
 ## 一、screenshot
 ### 1.启动界面
@@ -132,6 +132,6 @@ Kotlin中when的出现替代了switch，但其功能更加强大。
 
 国内：据我所知，美团已经开始使用kotlin。一些大型互联网公司由于业务导向，开发压力重，不敢轻易使用kotlin，不过它们已经开始跃跃欲试，着手在新的项目中使用kotlin。
 
-讲了这么多，学习kotlin虽然不是必须的，但是应对趋势发展，并且学习成本不高，那么多掌握一门技能，百利而不无一害。
+讲了这么多，学习kotlin虽然不是必须的，但是应对趋势发展，并且学习成本不高，那么多掌握一门技能，百利而无一害。
 
 
