@@ -1,6 +1,7 @@
 package com.tt.lvruheng.eyepetizer.mvp.presenter
 
 import android.content.Context
+import com.tt.lvruheng.eyepetizer.base.BasePresenter
 import com.tt.lvruheng.eyepetizer.mvp.contract.FindContract
 import com.tt.lvruheng.eyepetizer.mvp.contract.FindDetailContract
 import com.tt.lvruheng.eyepetizer.mvp.contract.HotContract
@@ -9,6 +10,7 @@ import com.tt.lvruheng.eyepetizer.mvp.model.FindModel
 import com.tt.lvruheng.eyepetizer.mvp.model.HotModel
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.FindBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
+import com.tt.lvruheng.eyepetizer.utils.NetworkUtils
 import com.tt.lvruheng.eyepetizer.utils.applySchedulers
 import io.reactivex.BackpressureOverflowStrategy
 import io.reactivex.Observable
@@ -36,16 +38,34 @@ class FindDetailPresenter(context: Context, view: FindDetailContract.View) : Fin
 
     override fun requestData(categoryName: String, strategy: String) {
         val observable: Observable<HotBean>? = mContext?.let { mModel.loadData(mContext!!, categoryName, strategy) }
-        observable?.applySchedulers()?.subscribe { bean: HotBean ->
+        observable?.applySchedulers()?.subscribe({ bean: HotBean ->
             mView?.setData(bean)
-        }
+        }, { error ->
+            run {
+                run {
+                    error.printStackTrace()
+                    if (NetworkUtils.isNetworkError(error)) {
+                        mView?.unexpectedErrorToast(BasePresenter.UNEXPECTED_ERROR.NETWORK, false)
+                    }
+                }
+            }
+        })
     }
 
     fun requesMoreData(start: Int, categoryName: String, strategy: String) {
         val observable: Observable<HotBean>? = mContext?.let { mModel.loadMoreData(mContext!!, start, categoryName, strategy) }
-        observable?.applySchedulers()?.subscribe { bean: HotBean ->
+        observable?.applySchedulers()?.subscribe({ bean: HotBean ->
             mView?.setData(bean)
-        }
+        }, { error ->
+            run {
+                run {
+                    error.printStackTrace()
+                    if (NetworkUtils.isNetworkError(error)) {
+                        mView?.unexpectedErrorToast(BasePresenter.UNEXPECTED_ERROR.NETWORK, false)
+                    }
+                }
+            }
+        })
     }
 
 }

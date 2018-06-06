@@ -6,6 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.tt.lvruheng.eyepetizer.base.BasePresenter
+import com.tt.lvruheng.eyepetizer.ui.BaseActivity
 
 
 /**
@@ -48,6 +51,10 @@ abstract class BaseFragment : Fragment() {
     }
     open protected fun onFragmentVisiableChange(b: Boolean) {
 
+    }
+
+    open fun unexpectedErrorToast(errorType: BasePresenter.UNEXPECTED_ERROR, ignoredRepeatedError:Boolean){
+        (activity as BaseActivity).unexpectedErrorToast(errorType,ignoredRepeatedError)
     }
 
 

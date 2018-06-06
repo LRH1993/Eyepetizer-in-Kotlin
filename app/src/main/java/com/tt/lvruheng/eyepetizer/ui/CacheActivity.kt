@@ -20,7 +20,7 @@ import zlc.season.rxdownload2.RxDownload
 /**
  * Created by lvruheng on 2017/7/12.
  */
-class CacheActivity : AppCompatActivity() {
+class CacheActivity : BaseActivity() {
     var mList = ArrayList<VideoBean>()
     lateinit var mAdapter: DownloadAdapter
     var mHandler: Handler = object : Handler() {

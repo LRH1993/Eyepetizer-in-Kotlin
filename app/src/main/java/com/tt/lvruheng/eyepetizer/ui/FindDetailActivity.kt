@@ -17,7 +17,7 @@ import java.util.regex.Pattern
 /**
  * Created by lvruheng on 2017/7/8.
  */
-class FindDetailActivity : AppCompatActivity(), FindDetailContract.View, SwipeRefreshLayout.OnRefreshListener {
+class FindDetailActivity : BaseActivity(), FindDetailContract.View, SwipeRefreshLayout.OnRefreshListener {
 
     lateinit var mPresenter: FindDetailPresenter
     lateinit var mAdapter: RankAdapter
