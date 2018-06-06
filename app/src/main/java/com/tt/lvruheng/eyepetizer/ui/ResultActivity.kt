@@ -18,7 +18,7 @@ import kotlin.collections.ArrayList
 /**
  * Created by lvruheng on 2017/7/11.
  */
-class ResultActivity : AppCompatActivity(), ResultContract.View, SwipeRefreshLayout.OnRefreshListener {
+class ResultActivity : BaseActivity(), ResultContract.View, SwipeRefreshLayout.OnRefreshListener {
     lateinit var keyWord: String
     lateinit var mPresenter: ResultPresenter
     lateinit var mAdapter: FeedAdapter

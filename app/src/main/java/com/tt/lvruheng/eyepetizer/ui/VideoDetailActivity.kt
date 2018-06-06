@@ -31,7 +31,7 @@ import java.util.concurrent.ExecutionException
 /**
  * Created by lvruheng on 2017/7/7.
  */
-class VideoDetailActivity : AppCompatActivity() {
+class VideoDetailActivity : BaseActivity() {
     companion object {
         var MSG_IMAGE_LOADED = 101
     }

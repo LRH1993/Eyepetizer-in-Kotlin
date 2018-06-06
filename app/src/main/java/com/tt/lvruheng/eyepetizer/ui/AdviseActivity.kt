@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_advise.*
 /**
  * Created by lvruheng on 2017/7/11.
  */
-class AdviseActivity:AppCompatActivity(){
+class AdviseActivity:BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advise)

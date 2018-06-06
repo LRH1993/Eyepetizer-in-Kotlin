@@ -24,7 +24,7 @@ import android.view.WindowManager
 
 
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : BaseActivity(), View.OnClickListener {
     var homeFragment: HomeFragment? = null
     var findFragment: FindFragment? = null
     var hotFragemnt: HotFragment? = null

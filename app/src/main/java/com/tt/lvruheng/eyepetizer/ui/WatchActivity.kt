@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_watch.*
 /**
  * Created by lvruheng on 2017/7/11.
  */
-class WatchActivity : AppCompatActivity() {
+class WatchActivity : BaseActivity() {
     var mList = ArrayList<VideoBean>()
     lateinit var mAdapter: WatchAdapter
     var mHandler: Handler = object : Handler() {

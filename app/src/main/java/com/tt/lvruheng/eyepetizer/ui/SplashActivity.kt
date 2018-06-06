@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 /**
  * Created by lvruheng on 2017/7/2.
  */
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //设置全屏
